@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class HandRotate : MonoBehaviour
 {
+
     double old_CompassTime = 0;
     Quaternion curCorrection = Quaternion.identity;
     Quaternion aimCorrection = Quaternion.identity;
 
-    private Gyroscope m_gyro;
-    Quaternion InitQ;
     static Vector3 GetCompassRawVector()
     {
         Vector3 ret = Input.compass.rawVector;
@@ -40,8 +39,6 @@ public class HandRotate : MonoBehaviour
         Input.gyro.enabled = true;
         // “ü—Í‚ÉƒRƒ“ƒpƒX‚ðON‚É‚·‚é
         Input.compass.enabled = true;
-
-        InitQ = Input.gyro.attitude;
     }
 
     void Update()
@@ -77,13 +74,13 @@ public class HandRotate : MonoBehaviour
             curCorrection = aimCorrection;
         }
 
-        transform.localRotation =/* Quaternion.Inverse(InitQ) * curCorrection * */gorientation;
+        transform.localRotation = curCorrection * gorientation;
     }
 
     static Quaternion changeAxis(Quaternion q)
     {
         var euler = q.eulerAngles;
-        return Quaternion.Euler(-euler.x, -euler.y, euler.z);
+        return Quaternion.Euler(-euler.x, -euler.z, -euler.y);
     }
 
     static bool isNaN(Quaternion q)
