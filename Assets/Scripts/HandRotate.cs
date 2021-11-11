@@ -77,7 +77,7 @@ public class HandRotate : MonoBehaviour
             curCorrection = aimCorrection;
         }
 
-        transform.localRotation = Quaternion.Inverse(InitQ) * curCorrection * gorientation;
+        transform.localRotation =/* Quaternion.Inverse(InitQ) * curCorrection * */gorientation;
     }
 
     static Quaternion changeAxis(Quaternion q)
