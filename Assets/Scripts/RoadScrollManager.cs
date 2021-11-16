@@ -74,7 +74,7 @@ public class RoadScrollManager : MonoBehaviour
         GameObject blockObject = Instantiate(scrollBlockObject, createPosition, scrollBlockObject.transform.rotation);
 
         // 移動と削除を行うコンポーネントを設定
-        blockObject.AddComponent<AutoDestroy>().time = 5f;
+        blockObject.AddComponent<AutoDestroy>().time = 10f;
         blockObject.AddComponent<ObjectTransformar>().translate = blockMoveForward;
 
         beforeBlockRenderer = blockObject.GetComponent<Renderer>();
