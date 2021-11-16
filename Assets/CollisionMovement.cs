@@ -72,6 +72,7 @@ public class CollisionMovement : MonoBehaviour
             this.directionToggle = !this.directionToggle;
         }
 
+
         //新規ポジションを設定
         this.newPosition = this.directionToggle ?
             this.newPosition + (vibrateSpeed * Time.deltaTime) :
