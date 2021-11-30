@@ -11,7 +11,9 @@ public class GameoverSceneManager : MonoBehaviour
     {
         backButton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("StartScene");
+            SceneManager.LoadScene("StartScene", LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync("GameoverScene");
+            
         });
 
     }

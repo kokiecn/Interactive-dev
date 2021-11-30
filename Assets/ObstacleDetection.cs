@@ -10,6 +10,8 @@ public class ObstacleDetection : MonoBehaviour
     {
         cam = Camera.main;
     }
+
+    // TODO@‘½•ªtrigger‚¶‚á‚È‚¢‚ÆáŠQ•¨‚ªˆø‚Á‚©‚©‚é
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Obstacle")

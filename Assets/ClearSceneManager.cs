@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class StartManager : MonoBehaviour
+using UnityEngine.UI;
+
+public class ClearSceneManager : MonoBehaviour
 {
     [SerializeField] private Button startbutton;
     void Start()
     {
         startbutton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("LevelChoiceScene",LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync("StartScene");
+            SceneManager.LoadScene("StartScene", LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync("ClearScene");
         });
-
     }
-
 }
