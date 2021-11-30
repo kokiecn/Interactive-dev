@@ -14,5 +14,15 @@ public class LevelManager : MonoBehaviour
             SceneManager.LoadScene("StartScene", LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync("LevelChoiceScene");
         });
+        
+        for(int i = 0; i < button_list.Length; i++)
+        {
+            button_list[i].onClick.AddListener(() =>
+            {
+                KeepItManager.Instance.Level = i;
+                SceneManager.LoadScene("Road", LoadSceneMode.Additive);
+                SceneManager.UnloadSceneAsync("LevelChoiceScene");
+            });
+        }
     }
 }

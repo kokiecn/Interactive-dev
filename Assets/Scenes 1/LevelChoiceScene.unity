@@ -314,7 +314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 5
 --- !u!222 &268272440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -534,7 +534,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 3
 --- !u!222 &504897632
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -613,7 +613,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 9
 --- !u!222 &558183835
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -774,7 +774,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backButton: {fileID: 1306265512}
-  button_list: []
+  button_list:
+  - {fileID: 574174214}
+  - {fileID: 61392231}
+  - {fileID: 2091920142}
+  - {fileID: 1138932992}
+  - {fileID: 799747568}
+  - {fileID: 1019442170}
+  - {fileID: 1673102590}
+  - {fileID: 1914679634}
+  - {fileID: 1540030129}
 --- !u!4 &598958517
 Transform:
   m_ObjectHideFlags: 0
@@ -992,7 +1001,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 8
 --- !u!222 &962258754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1071,7 +1080,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 4
 --- !u!222 &999506452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1708,7 +1717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 2
 --- !u!222 &1330694925
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2029,7 +2038,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 6
 --- !u!222 &1724655934
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2339,7 +2348,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 1
 --- !u!222 &1914207127
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2539,7 +2548,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Level 7
 --- !u!222 &1923929482
 CanvasRenderer:
   m_ObjectHideFlags: 0

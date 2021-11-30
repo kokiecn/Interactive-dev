@@ -327,6 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9850c9456927bbe4ca3a567886e925a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myskybox: {fileID: 2100000, guid: e222162ddb8d34547a133b673221b195, type: 2}
 --- !u!4 &1076302387
 Transform:
   m_ObjectHideFlags: 0

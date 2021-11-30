@@ -13,7 +13,6 @@ public class GameoverSceneManager : MonoBehaviour
         {
             SceneManager.LoadScene("StartScene", LoadSceneMode.Additive);
             SceneManager.UnloadSceneAsync("GameoverScene");
-            
         });
 
     }
