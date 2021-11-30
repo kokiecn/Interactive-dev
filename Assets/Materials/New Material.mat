@@ -75,6 +75,10 @@ Material:
     - _SplitCount: 100
     - _SrcBlend: 1
     - _UVSec: 0
+    - _XShift: 0
+    - _XSpeed: 1
+    - _YShift: 1
+    - _YSpeed: 0.65
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

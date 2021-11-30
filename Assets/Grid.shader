@@ -8,6 +8,10 @@ Shader "Custom/Unlit/Grid" {
         _MinThreshold("Min Distance Threshold", Float) = 10
         _MaxThreshold("Max Distance Threshold", Float) = 100
         _FarColor("Far Color", Color) = (0,0,0,1)
+        _XShift("Xuv Shift", Range(-1.0, 1.0)) = 0.1
+        _XSpeed("X Scroll Speed", Range(1.0, 100.0)) = 10.0
+        _YShift("Yuv Shift", Range(-1.0, 1.0)) = 0.1
+        _YSpeed("Y Scroll Speed", Range(0, 10)) = 1
     }
         SubShader{
             Tags { "RenderType" = "Opaque" }
@@ -45,6 +49,11 @@ Shader "Custom/Unlit/Grid" {
                 float _MinThreshold;
                 float _MaxThreshold;
 
+                float _XShift;
+                float _YShift;
+                float _XSpeed;
+                float _YSpeed;
+
                 v2f vert(appdata v)
                 {
                     v2f o;
@@ -56,6 +65,12 @@ Shader "Custom/Unlit/Grid" {
 
                 fixed4 frag(v2f i) : SV_Target
                 {
+                    _XShift = _XShift * _XSpeed;
+                    _YShift = _YShift * _YSpeed;
+
+                    i.uv.x = i.uv.x + _XShift * _Time;
+                    i.uv.y = i.uv.y + _YShift * _Time;
+
                      float dst = length(i.vertex_world - _CpPosition);
                      float fadelevel = (dst - _MinThreshold) / (_MaxThreshold - _MinThreshold);
                      fadelevel = clamp(fadelevel, 0, 1);
