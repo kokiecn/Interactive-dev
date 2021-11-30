@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +35,11 @@ public class KeepItManager : MonoBehaviour
 
     private async void Start()
     {
-        await UniTask
+        await UniTask.WaitUntil(() => savemanager.initialized);
+        for (int i = 0; i < Player.nbLevel; i++)
+        {
+            list_isClear[i] = savemanager.player.isClear[i];
+        }
     }
     private int level;
     public int Level

@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb773e40cba81ee459d74c1344c0d3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  savemanager: {fileID: 1881628577}
 --- !u!1 &1881628576
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +196,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f65974eac45ad4f92a8ba813f054a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player:
+    isClear: 000000000000000000
+  initialized: 0
 --- !u!4 &1881628578
 Transform:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class Player
 public class SaveManager : MonoBehaviour
 {
     public Player player;
+    public  bool initialized = false;
     private void Awake()
     {
         if (File.Exists(Application.dataPath + "/savedata.json"))
@@ -28,7 +29,7 @@ public class SaveManager : MonoBehaviour
             }
             savePlayerData(player);
         }
-        
+        initialized = true;
     }
 
     public void savePlayerData(Player player)
