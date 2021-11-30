@@ -16,7 +16,8 @@ public class ClearController : MonoBehaviour
 
     private IEnumerator Clear()
     {
-       yield return new WaitForSeconds(60f);
+        yield return new WaitForSeconds(10f);
+        KeepItManager.Instance.Save(KeepItManager.Instance.Level);
        SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);
        SceneManager.UnloadSceneAsync("Road");
 

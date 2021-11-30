@@ -33,6 +33,7 @@ public class KeepItManager : MonoBehaviour
 
     }
 
+
     private async void Start()
     {
         await UniTask.WaitUntil(() => savemanager.initialized);
@@ -51,6 +52,16 @@ public class KeepItManager : MonoBehaviour
         }
     }
 
-
+    public void Save(int clearindex)
+    {
+        for (int i = 0; i < Player.nbLevel; i++)
+        {
+            if(i == clearindex)
+            {
+                savemanager.player.isClear[i] = true;
+            }
+        }
+        savemanager.savePlayerData(savemanager.player);
+    }
 
 }
