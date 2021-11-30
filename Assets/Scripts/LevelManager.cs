@@ -23,6 +23,13 @@ public class LevelManager : MonoBehaviour
                 SceneManager.LoadScene("Road", LoadSceneMode.Additive);
                 SceneManager.UnloadSceneAsync("LevelChoiceScene");
             });
+            if (KeepItManager.Instance.List_isClear[i])
+            {
+                ColorBlock cb = button_list[i].colors;
+                cb.normalColor = new Color(1, 0, 0, 1);
+                button_list[i].colors = cb;
+            }
         }
+
     }
 }

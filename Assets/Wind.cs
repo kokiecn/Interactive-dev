@@ -28,8 +28,6 @@ public class Wind : MonoBehaviour {
         OnTriggerStay();
     }
 
-
-
 	void OnTriggerStay() {
         if ( rb == null ) {
             return;

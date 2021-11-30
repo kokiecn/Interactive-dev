@@ -7,27 +7,28 @@ using UnityEngine;
 public class Player
 {
     public static int nbLevel = 9;
-    public bool[] isClear = new bool[nbLevel];
+    public  bool[] isClear = new bool[nbLevel];
+
 }
 public class SaveManager : MonoBehaviour
 {
- 
-    private void Start()
+    public Player player;
+    private void Awake()
     {
-        Player player = new Player();
         if (File.Exists(Application.dataPath + "/savedata.json"))
         {
             player = loadPlayerData();
         }
         else
         {
+            player = new Player();
             for (int i = 0; i < Player.nbLevel; i++)
             {
                 player.isClear[i] = false;
             }
-
+            savePlayerData(player);
         }
-        savePlayerData(player);
+        
     }
 
     public void savePlayerData(Player player)

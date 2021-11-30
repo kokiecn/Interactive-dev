@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class KeepItManager : MonoBehaviour
 {
+    private const int NUMBER_STAGE = 9;
+    private bool[] list_isClear;
+
+    [SerializeField] private SaveManager savemanager;
+    public bool[] List_isClear
+    {
+        get { return list_isClear; }
+    }
     private static KeepItManager _Instance = null;
     public static KeepItManager Instance
     {
@@ -20,8 +28,14 @@ public class KeepItManager : MonoBehaviour
     private void Awake()
     {
         _Instance = this;
+        list_isClear = new bool[NUMBER_STAGE];
+
     }
 
+    private async void Start()
+    {
+        await UniTask
+    }
     private int level;
     public int Level
     {
