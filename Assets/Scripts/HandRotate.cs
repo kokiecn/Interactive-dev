@@ -14,11 +14,11 @@ public class HandRotate : MonoBehaviour
         Vector3 ret = Input.compass.rawVector;
         if (Application.platform == RuntimePlatform.Android)
         {
-            // Androidでは、rawVectorの軸を変換
+            // Android縺ｧ縺ｯ縲〉awVector縺ｮ霆ｸ繧貞､画鋤
             switch (Screen.orientation)
             {
                 case ScreenOrientation.LandscapeLeft:
-                    ret = new Vector3(-ret.y, ret.x, ret.z);
+                    ret = new Vector3(ret.y, -ret.x, ret.z);
                     break;
 
                 case ScreenOrientation.LandscapeRight:
@@ -35,9 +35,9 @@ public class HandRotate : MonoBehaviour
 
     void Start()
     {
-        // 入力にジャイロをONにする
+        // 蜈･蜉帙↓繧ｸ繝｣繧､繝ｭ繧丹N縺ｫ縺吶ｋ
         Input.gyro.enabled = true;
-        // 入力にコンパスをONにする
+        // 蜈･蜉帙↓繧ｳ繝ｳ繝代せ繧丹N縺ｫ縺吶ｋ
         Input.compass.enabled = true;
     }
 
