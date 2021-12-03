@@ -1,33 +1,29 @@
-using UnityEngine;
+using System;
 using System.Collections;
+using System.Threading;
+using System.Threading.Tasks;
+using UnityEngine;
+
 
 public class Wind : MonoBehaviour {
     public float coefficient;   // 空気抵抗係数
     public Vector3 velocity;    // 風速
     public Rigidbody rb;
-    public bool isTap;
+    float cnt;
+    public float start;
+    public float end;
 
-
-    void Update(){
-    	if (Application.isEditor) {
-    		if (Input.GetMouseButton(0)) {
-    			rb = GetComponent<Rigidbody>();
-    		} else {
-    			rb = null;
-    		}
-    	} else {
-    		if (Input.touchCount > 0) {
-    			Touch touch = Input.GetTouch(0);
-    			if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Began) {
-        			rb = GetComponent<Rigidbody>();
-    			}
-    		} else {
-    			rb = null;
-    		}
-    	}
-        OnTriggerStay();
+    void Start(){
+    	rb = GetComponent<Rigidbody>();	
     }
+    
 
+	void Update() {
+	   cnt += Time.deltaTime;
+	   if (start <= cnt && cnt <= end) {
+	   	OnTriggerStay();
+	   }
+	}
 
 
 	void OnTriggerStay() {
