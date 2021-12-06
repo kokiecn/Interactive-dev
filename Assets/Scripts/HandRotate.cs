@@ -38,7 +38,7 @@ public class HandRotate : MonoBehaviour
         // 入力にジャイロをONにする
         Input.gyro.enabled = true;
         // 入力にコンパスをONにする
-        Input.compass.enabled = true;
+        Input.compass.enabled = false;
     }
 
     void Update()
@@ -80,7 +80,7 @@ public class HandRotate : MonoBehaviour
     static Quaternion changeAxis(Quaternion q)
     {
         var euler = q.eulerAngles;
-        return Quaternion.Euler(-euler.x, -euler.z, -euler.y);
+        return Quaternion.Euler(euler.y, euler.x, -euler.z);
     }
 
     static bool isNaN(Quaternion q)
