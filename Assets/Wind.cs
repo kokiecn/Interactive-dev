@@ -17,9 +17,6 @@ public class Wind : MonoBehaviour {
     	rb = GetComponent<Rigidbody>();	
     }
     
-
-<<<<<<< HEAD
-=======
 	void Update() {
 	   cnt += Time.deltaTime;
 	   if (start <= cnt && cnt <= end) {
@@ -28,7 +25,6 @@ public class Wind : MonoBehaviour {
 	}
 
 
->>>>>>> dev
 	void OnTriggerStay() {
         if ( rb == null ) {
             return;
