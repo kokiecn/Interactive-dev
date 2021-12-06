@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class VibrationManager
+public static class Vibration
 
 {
 #if UNITY_ANDROID && !UNITY_EDITOR
