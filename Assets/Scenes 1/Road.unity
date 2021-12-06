@@ -183,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6c4b6fac8887d4bb42c57e99962499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollBlockObject: {fileID: 5450034852499481228, guid: b25c2c80de9a3404da64b6f3ee21e23e, type: 3}
+  scrollBlockObject: {fileID: 8742352078976274020, guid: 5f49215339248b7459aa4a14184d1b4e, type: 3}
   blockPopPoint: {fileID: 268723463}
   blockMoveForward: {x: 0.02, y: 0, z: 0}
   before_block_create_count: 9
@@ -417,7 +417,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -611,9 +611,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 894dbb8d600abba4da8002e9064ba6ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gyroEnabled: 0
-  cameraContainer: {fileID: 0}
-  rot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &1576112922
 GameObject:
   m_ObjectHideFlags: 0
