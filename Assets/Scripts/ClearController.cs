@@ -20,7 +20,7 @@ public class ClearController : MonoBehaviour
         KeepItManager.Instance.Save(KeepItManager.Instance.Level);
         KeepItManager.Instance.Load();
        SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);
-       SceneManager.UnloadScene("Road");
+       SceneManager.UnloadSceneAsync("Road");
 
     }
 }
