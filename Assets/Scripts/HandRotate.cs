@@ -14,11 +14,11 @@ public class HandRotate : MonoBehaviour
         Vector3 ret = Input.compass.rawVector;
         if (Application.platform == RuntimePlatform.Android)
         {
-            // Androidでは、rawVectorの軸を変換
+            // Android?????ArawVector??????????
             switch (Screen.orientation)
             {
                 case ScreenOrientation.LandscapeLeft:
-                    ret = new Vector3(ret.y, -ret.x, ret.z);
+                    ret = new Vector3(-ret.y, ret.x, ret.z);
                     break;
 
                 case ScreenOrientation.LandscapeRight:
@@ -35,9 +35,9 @@ public class HandRotate : MonoBehaviour
 
     void Start()
     {
-        // 入力にジャイロをONにする
+        // ???????W???C????ON??????
         Input.gyro.enabled = true;
-        // 入力にコンパスをONにする
+        // ???????R???p?X??ON??????
         Input.compass.enabled = false;
     }
 
@@ -80,7 +80,7 @@ public class HandRotate : MonoBehaviour
     static Quaternion changeAxis(Quaternion q)
     {
         var euler = q.eulerAngles;
-        return Quaternion.Euler(euler.y, euler.x, -euler.z);
+        return Quaternion.Euler(-euler.x, -euler.z, -euler.y);
     }
 
     static bool isNaN(Quaternion q)
