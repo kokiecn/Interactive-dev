@@ -297,7 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollBlockObject: {fileID: 8742352078976274020, guid: 5f49215339248b7459aa4a14184d1b4e, type: 3}
   blockPopPoint: {fileID: 268723463}
-  blockMoveForward: {x: 0.05, y: 0, z: 0}
+  blockMoveForward: {x: 0.2, y: 0, z: 0}
   before_block_create_count: 8
 --- !u!4 &268723463
 Transform:
@@ -1280,6 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2118572189}
+  testObj: {fileID: 0}
 --- !u!64 &1419233416
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2380,18 +2381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 2055751376}
---- !u!114 &919132148058522368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148058522361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8e34a51c5a18664cb9fba17be153c22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  testObj: {fileID: 7165064441115985657}
 --- !u!23 &1125479026161285729
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2549,15 +2539,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8381240089784127726, guid: 8567cba490de9724ba76fe02efbfe01b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8381240089784127726, guid: 8567cba490de9724ba76fe02efbfe01b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8381240089784127726, guid: 8567cba490de9724ba76fe02efbfe01b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8381240089784127726, guid: 8567cba490de9724ba76fe02efbfe01b, type: 3}
       propertyPath: m_LocalPosition.x
