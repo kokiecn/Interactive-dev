@@ -9,8 +9,9 @@ public class CollisionDetection : MonoBehaviour
     {
         if(collision.gameObject.tag == "ObjToCarry")
         {
-            Debug.Log("failed");
-            SceneManager.LoadScene("GameoverScene");
+            Destroy(collision.gameObject);
+            SceneManager.LoadScene("GameoverScene",LoadSceneMode.Additive);
+            SceneManager.UnloadSceneAsync("Road");
         }
     }
 }
