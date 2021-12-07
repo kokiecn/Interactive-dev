@@ -17,7 +17,6 @@ public class Wind : MonoBehaviour {
     	rb = GetComponent<Rigidbody>();	
     }
     
-
 	void Update() {
 	   cnt += Time.deltaTime;
 	   if (start <= cnt && cnt <= end) {
