@@ -17,9 +17,9 @@ public class LevelManager : MonoBehaviour
         
         for(int i = 0; i < button_list.Length; i++)
         {
-            button_list[i].onClick.AddListener(() =>
+            int tmp = i;
+            button_list[tmp].onClick.AddListener(() =>
             {
-                int tmp = i;
                 KeepItManager.Instance.Level = tmp;
                 SceneManager.LoadScene("Road", LoadSceneMode.Additive);
                 SceneManager.UnloadSceneAsync("LevelChoiceScene");
@@ -28,6 +28,9 @@ public class LevelManager : MonoBehaviour
             {
                 ColorBlock cb = button_list[i].colors;
                 cb.normalColor = new Color(1, 0, 0, 1);
+                cb.highlightedColor = new Color(1, 0.1f, 0, 1);
+                cb.pressedColor = new Color(1, 0.2f, 0, 1);
+                
                 button_list[i].colors = cb;
             }
         }

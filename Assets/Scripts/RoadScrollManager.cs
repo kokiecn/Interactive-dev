@@ -71,7 +71,7 @@ public class RoadScrollManager : MonoBehaviour
 
     private void CreateBlock(Vector3 createPosition)
     {
-        GameObject blockObject = Instantiate(scrollBlockObject, createPosition, scrollBlockObject.transform.rotation);
+        GameObject blockObject = Instantiate(scrollBlockObject, createPosition, scrollBlockObject.transform.rotation,this.transform);
 
         // 移動と削除を行うコンポーネントを設定
         blockObject.AddComponent<AutoDestroy>().time = 10f;
