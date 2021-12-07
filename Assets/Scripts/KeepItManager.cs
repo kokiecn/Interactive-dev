@@ -2,6 +2,7 @@ using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -41,7 +42,7 @@ public class Player
         _Instance = this;
         list_isClear = new bool[NUMBER_STAGE];
 
-        if (File.Exists(Application.dataPath + "/savedata.json"))
+        if (File.Exists(Application.persistentDataPath + "/savedata.json"))
         {
             player = loadPlayerData();
         }
@@ -93,7 +94,7 @@ public class Player
 
         string jsonstr = JsonUtility.ToJson(player);
 
-        writer = new StreamWriter(Application.dataPath + "/savedata.json", false);
+        writer = new StreamWriter(Application.persistentDataPath + "/savedata.json", false, Encoding.GetEncoding("utf-8"));
         writer.Write(jsonstr);
         writer.Flush();
         writer.Close();
@@ -103,7 +104,7 @@ public class Player
     {
         string datastr = "";
         StreamReader reader;
-        reader = new StreamReader(Application.dataPath + "/savedata.json");
+        reader = new StreamReader(Application.persistentDataPath + "/savedata.json", Encoding.GetEncoding("utf-8"));
         datastr = reader.ReadToEnd();
         reader.Close();
 

@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ObstacleDetection : MonoBehaviour
 {
-    private Camera cam;
+    [SerializeField]private Camera cam;
 
     private void Start()
     {
-        cam = Camera.main;
+     
     }
-
+    /*
     // TODOÅ@ëΩï™triggerÇ∂Ç·Ç»Ç¢Ç∆è·äQï®Ç™à¯Ç¡Ç©Ç©ÇÈ
     private void OnCollisionEnter(Collision collision)
     {
@@ -20,5 +20,14 @@ public class ObstacleDetection : MonoBehaviour
             cam.GetComponent<CameraShake>().Shake(0.2f, 0.01f);
         }
 
+    }*/
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            Vibration.Vibrate(200);
+            cam.GetComponent<CameraShake>().Shake(0.2f, 0.01f);
+        }
+        Debug.Log("trogger");
     }
 }
