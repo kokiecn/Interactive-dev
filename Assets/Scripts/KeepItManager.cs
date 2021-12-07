@@ -1,15 +1,22 @@
 using Cysharp.Threading.Tasks;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class KeepItManager : MonoBehaviour
+[System.Serializable]
+public class Player
+{
+    public static int nbLevel = 9;
+    public bool[] isClear = new bool[nbLevel];
+}
+
+    public class KeepItManager : MonoBehaviour
 {
     private const int NUMBER_STAGE = 9;
     private bool[] list_isClear;
 
-    [SerializeField] private SaveManager savemanager;
     public bool[] List_isClear
     {
         get { return list_isClear; }
@@ -26,22 +33,38 @@ public class KeepItManager : MonoBehaviour
             _Instance = value;
         }
     }
+
+    public Player player;
+
     private void Awake()
     {
         _Instance = this;
         list_isClear = new bool[NUMBER_STAGE];
 
+        if (File.Exists(Application.dataPath + "/savedata.json"))
+        {
+            player = loadPlayerData();
+        }
+        else
+        {
+            player = new Player();
+            for (int i = 0; i < Player.nbLevel; i++)
+            {
+                player.isClear[i] = false;
+            }
+            savePlayerData(player);
+        }
     }
-
 
     private async void Start()
     {
-        await UniTask.WaitUntil(() => savemanager.initialized);
+  
         for (int i = 0; i < Player.nbLevel; i++)
         {
-            list_isClear[i] = savemanager.player.isClear[i];
+            list_isClear[i] = player.isClear[i];
         }
     }
+
     private int level;
     public int Level
     {
@@ -58,10 +81,40 @@ public class KeepItManager : MonoBehaviour
         {
             if(i == clearindex)
             {
-                savemanager.player.isClear[i] = true;
+                player.isClear[i] = true;
             }
         }
-        savemanager.savePlayerData(savemanager.player);
+        savePlayerData(player);
     }
 
+    public void savePlayerData(Player player)
+    {
+        StreamWriter writer;
+
+        string jsonstr = JsonUtility.ToJson(player);
+
+        writer = new StreamWriter(Application.dataPath + "/savedata.json", false);
+        writer.Write(jsonstr);
+        writer.Flush();
+        writer.Close();
+    }
+
+    public Player loadPlayerData()
+    {
+        string datastr = "";
+        StreamReader reader;
+        reader = new StreamReader(Application.dataPath + "/savedata.json");
+        datastr = reader.ReadToEnd();
+        reader.Close();
+
+        return JsonUtility.FromJson<Player>(datastr);
+    }
+
+    public void Load()
+    {
+        for (int i = 0; i < Player.nbLevel; i++)
+        {
+            list_isClear[i] = player.isClear[i];
+        }
+    }
 }
