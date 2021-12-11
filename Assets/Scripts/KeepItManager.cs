@@ -57,7 +57,7 @@ public class Player
         }
     }
 
-    private async void Start()
+    private void Start()
     {
   
         for (int i = 0; i < Player.nbLevel; i++)
