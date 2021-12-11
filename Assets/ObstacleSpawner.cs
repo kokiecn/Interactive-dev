@@ -10,7 +10,7 @@ public class ObstacleSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int randn = Random.Range(2, 20);
+        int randn = Random.Range(1, 20);
         if (randn < 3)
         {
             GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
