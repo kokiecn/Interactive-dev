@@ -18,7 +18,7 @@ public class ObstacleDetection : MonoBehaviour
         {
             Vibration.Vibrate(200);
             cam.GetComponent<CameraShake>().Shake(0.2f, 0.01f);
-            rb.AddForce(transform.up *70);
+            rb.AddForce(new Vector3(0,1.0f,0) *70);
         }
 
     }
