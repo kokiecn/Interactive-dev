@@ -1,50 +1,50 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RoadScrollManager : MonoBehaviour
 {
     /// <summary>
-    /// ƒXƒNƒ[ƒ‹‚Ì1ƒuƒƒbƒN‚Æ‚È‚éƒvƒŒƒnƒu
+    /// ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«æ™‚ã®1ãƒ–ãƒ­ãƒƒã‚¯ã¨ãªã‚‹ãƒ—ãƒ¬ãƒãƒ–
     /// </summary>
     [SerializeField]
     protected GameObject scrollBlockObject;
 
     /// <summary>
-    /// ƒuƒƒbƒN‚Ì¶¬ŠJnˆÊ’u
+    /// ãƒ–ãƒ­ãƒƒã‚¯ã®ç”Ÿæˆé–‹å§‹ä½ç½® 
     /// </summary>
     [SerializeField]
     protected Transform blockPopPoint;
 
     /// <summary>
-    /// ƒuƒƒbƒN‚ÌˆÚ“®•ûŒü
+    /// ãƒ–ãƒ­ãƒƒã‚¯ã®ç§»å‹•æ–¹å‘
     /// </summary>
     [SerializeField]
     protected Vector3 blockMoveForward;
 
     /// <summary>
-    /// ‚ ‚ç‚©‚¶‚ßƒuƒƒbƒN‚ğ¶¬‚µ‚Ä‚¨‚­”
+    /// ã‚ã‚‰ã‹ã˜ã‚ãƒ–ãƒ­ãƒƒã‚¯ã‚’ç”Ÿæˆã—ã¦ãŠãæ•°
     /// </summary>
     [SerializeField]
     protected int before_block_create_count = 0;
 
     /// <summary>
-    /// ÅŒã‚Ì¶¬‚µ‚½ƒuƒƒbƒN‚ÌRendererƒRƒ“ƒ|[ƒlƒ“ƒg(ˆ——p)
+    /// æœ€å¾Œã®ç”Ÿæˆã—ãŸãƒ–ãƒ­ãƒƒã‚¯ã®Rendererã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ(å‡¦ç†ç”¨)
     /// </summary>
     private Renderer beforeBlockRenderer;
 
     void Start()
     {
-        // ‰Šú‰»‚Éw’è”•ªƒuƒƒbƒN‚ğ¶¬‚·‚é
+        // åˆæœŸåŒ–æ™‚ã«æŒ‡å®šæ•°åˆ†ãƒ–ãƒ­ãƒƒã‚¯ã‚’ç”Ÿæˆã™ã‚‹
         if (0 < before_block_create_count)
         {
-            // ¶¬‘ÎÛƒuƒƒbƒN‚ÌBounds
+            // ç”Ÿæˆå¯¾è±¡ãƒ–ãƒ­ãƒƒã‚¯ã®Bounds
             Bounds blockRendererBounds = scrollBlockObject.GetComponent<Renderer>().bounds;
             blockRendererBounds.center = blockPopPoint.position;
 
             for (int i = 0; i < before_block_create_count; i++)
             {
-                // ˆÚ“®•ûŒü‚ªw’è‚³‚ê‚Ä‚¢‚é²‚Ì‚İ‚ğBounds.size•ª‚¸‚ç‚µ‚½ˆÊ’u‚É¶¬‚·‚é
+                // ç§»å‹•æ–¹å‘ãŒæŒ‡å®šã•ã‚Œã¦ã„ã‚‹è»¸ã®ã¿ã‚’Bounds.sizeåˆ†ãšã‚‰ã—ãŸä½ç½®ã«ç”Ÿæˆã™ã‚‹
                 Vector3 createPosition = blockPopPoint.position + new Vector3(
                     GetBinarizationFloat(blockMoveForward.x) * (blockRendererBounds.size.x * i),
                     GetBinarizationFloat(blockMoveForward.y) * (blockRendererBounds.size.y * i),
@@ -57,12 +57,12 @@ public class RoadScrollManager : MonoBehaviour
 
     private void Update()
     {
-        // Ÿ‚ÌƒuƒƒbƒN‚Ì¶¬”»’è—p‚ÌBoundsƒCƒ“ƒXƒ^ƒ“ƒXì¬
+        // æ¬¡ã®ãƒ–ãƒ­ãƒƒã‚¯ã®ç”Ÿæˆåˆ¤å®šç”¨ã®Boundsã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ä½œæˆ
         Bounds beforeBounds = beforeBlockRenderer.bounds;
         beforeBounds.size = beforeBlockRenderer.bounds.size * 2;
         beforeBounds.center += blockMoveForward;
 
-        // ¶¬ˆÊ’u‚©‚ç”»’è—p‚ÌBounds“à‚©‚ço‚Ä‚¢‚é‚©”»’è
+        // ç”Ÿæˆä½ç½®ã‹ã‚‰åˆ¤å®šç”¨ã®Boundså†…ã‹ã‚‰å‡ºã¦ã„ã‚‹ã‹åˆ¤å®š
         if (!beforeBounds.Contains(blockPopPoint.position - new Vector3(0.05f,0,0)))
         {
             CreateBlock(blockPopPoint.position);
@@ -73,7 +73,7 @@ public class RoadScrollManager : MonoBehaviour
     {
         GameObject blockObject = Instantiate(scrollBlockObject, createPosition, scrollBlockObject.transform.rotation,this.transform);
 
-        // ˆÚ“®‚Æíœ‚ğs‚¤ƒRƒ“ƒ|[ƒlƒ“ƒg‚ğİ’è
+        // ç§»å‹•ã¨å‰Šé™¤ã‚’è¡Œã†ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’è¨­å®š
         blockObject.AddComponent<AutoDestroy>().time = 10f;
         blockObject.AddComponent<ObjectTransformar>().translate = blockMoveForward;
 
