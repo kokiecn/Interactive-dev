@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4828797622640269737}
   - component: {fileID: 4852901496941596433}
   m_Layer: 0
-  m_Name: Road
+  m_Name: Road_level3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   tree1: {fileID: 2850485756782883265}
   tree2: {fileID: 6953431579939643039}
   windmilPrefab: {fileID: 8130606916089011888, guid: c4a4006c2ac4e8741b2af419b2a7f637, type: 3}
-  stageLevel: 2
+  stageLevel: 3
 --- !u!1001 &980574235744042049
 PrefabInstance:
   m_ObjectHideFlags: 0
