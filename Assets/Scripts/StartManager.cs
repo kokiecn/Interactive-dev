@@ -3,6 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+// public class StartManager : MonoBehaviour
+// {
+//     [SerializeField] private Button startbutton;
+//     private bool pressed;
+//     void Start()
+//     {
+//         pressed = false;
+//         startbutton.onClick.AddListener(() =>
+//         {
+//             if (!pressed)
+//             {
+//                 SceneManager.LoadScene("LevelChoiceScene", LoadSceneMode.Additive);
+//                 SceneManager.UnloadSceneAsync("StartScene");
+//                 pressed = true;
+//             }
+
+//         });
+
+//     }
+
+// }
+
 public class StartManager : MonoBehaviour
 {
     [SerializeField] private Button startbutton;
@@ -10,17 +32,23 @@ public class StartManager : MonoBehaviour
     void Start()
     {
         pressed = false;
+
         startbutton.onClick.AddListener(() =>
         {
             if (!pressed)
             {
-                SceneManager.LoadScene("LevelChoiceScene", LoadSceneMode.Additive);
-                SceneManager.UnloadSceneAsync("StartScene");
-                pressed = true;
+                Invoke("Scene", 2);
             }
 
         });
+    }
 
+    void Scene()
+    {
+        SceneManager.LoadScene("LevelChoiceScene", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("StartScene");
+        pressed = true;
     }
 
 }
+
