@@ -1,21 +1,21 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class RotateAnimation : MonoBehaviour
 {
     /// <summary>
-    /// X²‚ğŠî“_‚É‰ñ“]‚·‚é‘¬‚³
+    /// Xè»¸ã‚’åŸºç‚¹ã«å›è»¢ã™ã‚‹é€Ÿã•
     /// </summary>
     [SerializeField]
     private float rotAngleX = 2.0f;
 
     /// <summary>
-    /// Y²‚ğŠî“_‚É‰ñ“]‚·‚é‘¬‚³
+    /// Yè»¸ã‚’åŸºç‚¹ã«å›è»¢ã™ã‚‹é€Ÿã•
     /// </summary>
     [SerializeField]
     private float rotAngleY = 2.0f;
 
     /// <summary>
-    /// Z²‚ğŠî“_‚É‰ñ“]‚·‚é‘¬‚³
+    /// Zè»¸ã‚’åŸºç‚¹ã«å›è»¢ã™ã‚‹é€Ÿã•
     /// </summary>
     [SerializeField]
     private float rotAngleZ = 2.0f;
@@ -23,7 +23,7 @@ public class RotateAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // ƒtƒŒ[ƒ€‚²‚Æ‚É‰ñ“]‚³‚¹‚é
+        // ãƒ•ãƒ¬ãƒ¼ãƒ ã”ã¨ã«å›è»¢ã•ã›ã‚‹
         transform.Rotate(rotAngleX, rotAngleY, rotAngleZ);
     }
 }
