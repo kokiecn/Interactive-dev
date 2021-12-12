@@ -63,7 +63,7 @@ public class RoadScrollManager : MonoBehaviour
         beforeBounds.center += blockMoveForward;
 
         // ¶¬ˆÊ’u‚©‚ç”»’è—p‚ÌBounds“à‚©‚ço‚Ä‚¢‚é‚©”»’è
-        if (!beforeBounds.Contains(blockPopPoint.position))
+        if (!beforeBounds.Contains(blockPopPoint.position - new Vector3(0.05f,0,0)))
         {
             CreateBlock(blockPopPoint.position);
         }

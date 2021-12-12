@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class ObstacleDetection : MonoBehaviour
 {
-    private Camera cam;
-
+    [SerializeField]private Camera cam;
+    [SerializeField] private GameObject testObj;
+    private Rigidbody rb;
     private void Start()
     {
-        cam = Camera.main;
+        rb = testObj.GetComponent<Rigidbody>();
     }
 
-    // TODOÅ@ëΩï™triggerÇ∂Ç·Ç»Ç¢Ç∆è·äQï®Ç™à¯Ç¡Ç©Ç©ÇÈ
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Obstacle")
+        if (other.CompareTag("Obstacle"))
         {
             Vibration.Vibrate(200);
             cam.GetComponent<CameraShake>().Shake(0.2f, 0.01f);
+            rb.AddForce(new Vector3(0,1.0f,0) *70);
         }
 
     }
