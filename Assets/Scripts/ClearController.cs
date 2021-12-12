@@ -17,6 +17,7 @@ public class ClearController : MonoBehaviour
     {
         currentTime = gameTime;
         StartCoroutine(Clear());
+
     }
 
     private  void Update()
@@ -30,7 +31,7 @@ public class ClearController : MonoBehaviour
     }
     private IEnumerator Clear()
     {
-        yield return new WaitForSeconds(30f);
+        yield return new WaitForSeconds(gameTime);
         KeepItManager.Instance.Save(KeepItManager.Instance.Level);
         KeepItManager.Instance.Load();
         SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);

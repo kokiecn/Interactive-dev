@@ -6,12 +6,19 @@ using UnityEngine.SceneManagement;
 public class StartManager : MonoBehaviour
 {
     [SerializeField] private Button startbutton;
+    private bool pressed;
     void Start()
     {
+        pressed = false;
         startbutton.onClick.AddListener(() =>
         {
-            SceneManager.LoadScene("LevelChoiceScene",LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync("StartScene");
+            if (!pressed)
+            {
+                SceneManager.LoadScene("LevelChoiceScene", LoadSceneMode.Additive);
+                SceneManager.UnloadSceneAsync("StartScene");
+                pressed = true;
+            }
+
         });
 
     }
