@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +21,7 @@ public class HandRotate2 : MonoBehaviour
     {
         Quaternion move = Quaternion.FromToRotation(Input.gyro.gravity, deviceDown);
         move = changeAxis(move);
-        // ‡¬‚µ‚ÄA©g‚Éİ’è
+        // åˆæˆã—ã¦ã€è‡ªèº«ã«è¨­å®š
         this.transform.rotation = q_hand * move;
 
     }
