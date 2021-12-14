@@ -5,13 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class CollisionDetection : MonoBehaviour
 {
+    private bool isLoaded;
+    private void Start()
+    {
+        isLoaded = false;
+    }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "ObjToCarry")
+        
+        if(collision.gameObject.tag == "Road")
         {
-            Destroy(collision.gameObject);
-            SceneManager.LoadScene("GameoverScene",LoadSceneMode.Additive);
-            SceneManager.UnloadSceneAsync("Road");
+            if (!isLoaded)
+            {
+                if (collision.gameObject != null)
+                {
+                    Destroy(collision.gameObject);
+                }
+                SceneManager.LoadScene("GameoverScene", LoadSceneMode.Additive);
+                SceneManager.UnloadSceneAsync("Road");
+                isLoaded = true;
+            }
         }
     }
 }
