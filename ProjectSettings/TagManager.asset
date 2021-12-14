@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ObjToCarry
   - Obstacle
+  - Road
   layers:
   - Default
   - TransparentFX
