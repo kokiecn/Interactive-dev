@@ -619,6 +619,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4770119959886609650, guid: b48f74ec222f5f44ca69b18a851359d2, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: e09d9c83adf4c544998245c8ae7d681d, type: 2}
     - target: {fileID: 4770119959886609663, guid: b48f74ec222f5f44ca69b18a851359d2, type: 3}
       propertyPath: hand
       value: 
@@ -1497,7 +1501,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+      propertyPath: power
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
       propertyPath: testObj
+      value: 
+      objectReference: {fileID: 614935739}
+    - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+      propertyPath: testObj.Array.data[0]
       value: 
       objectReference: {fileID: 614935739}
     - target: {fileID: 3379029918802558161, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}

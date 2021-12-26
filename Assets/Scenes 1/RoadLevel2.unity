@@ -529,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6c4b6fac8887d4bb42c57e99962499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollBlockObject: {fileID: 8742352078976274020, guid: aa5f61366bf7b4c59983a2160199afaa, type: 3}
+  scrollBlockObject: {fileID: 8742352078976274020, guid: 5f49215339248b7459aa4a14184d1b4e, type: 3}
   blockPopPoint: {fileID: 268723463}
   blockMoveForward: {x: 0.2, y: 0, z: 0}
   before_block_create_count: 8
@@ -2407,6 +2407,10 @@ PrefabInstance:
       propertyPath: testObj
       value: 
       objectReference: {fileID: 7165064441115985657}
+    - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+      propertyPath: testObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 7165064441115985657}
     - target: {fileID: 4703566488480602870, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
       propertyPath: m_Name
       value: Hand_3 1
@@ -2508,6 +2512,7 @@ GameObject:
   - component: {fileID: 7504330176762747971}
   - component: {fileID: 7165064441115985659}
   - component: {fileID: 7165064441115985658}
+  - component: {fileID: 7165064441115985660}
   m_Layer: 0
   m_Name: Ball FBX
   m_TagString: ObjToCarry
@@ -2544,6 +2549,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7165064441115985660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165064441115985657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396a17dffed914746b1b8de4d41f473f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7504330176762747971
 Transform:
   m_ObjectHideFlags: 0

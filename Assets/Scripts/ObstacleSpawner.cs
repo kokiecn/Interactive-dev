@@ -16,7 +16,42 @@ public class ObstacleSpawner : MonoBehaviour
         Debug.Log(stageLevel);
         if (stageLevel == 2)
         {
-            int randn = Random.Range(1, 10);
+            CreateObstacle(5f);
+        }
+        else if(stageLevel == 1)
+        {
+            int randn = Random.Range(1, 20);
+            if (randn < 5)
+            {
+                if (randn < 3)
+                {
+                    tree1.SetActive(false);
+                    GameObject windmil = Instantiate(windmilPrefab, Vector3.zero, Quaternion.identity);
+                    windmil.transform.SetParent(this.transform);
+                    windmil.transform.localPosition = tree1.transform.localPosition;
+                    windmil.GetComponent<Wind2>().velocity = new Vector3(0, 0, -10);
+                }
+                else
+                {
+                    tree2.SetActive(false);
+                    GameObject windmil = Instantiate(windmilPrefab, Vector3.zero, Quaternion.Euler(0, 180, 0));
+                    windmil.transform.SetParent(this.transform);
+                    windmil.transform.localPosition = tree2.transform.localPosition;
+                    windmil.GetComponent<Wind2>().velocity = new Vector3(0, 0, 10);
+                }
+            }
+        }
+        else if (stageLevel == 3)
+        {
+            CreateObstacle(5f);
+        }
+        else if(stageLevel == 5)
+        {
+            CreateObstacle(15f);
+        }
+        else if (stageLevel == 0 )
+        {
+            int randn = Random.Range(1, 20);
             if (randn < 3)
             {
                 GameObject rock = Instantiate(rockPrefab, Vector3.zero, Quaternion.Euler(-90, 0, 0));
@@ -25,21 +60,9 @@ public class ObstacleSpawner : MonoBehaviour
                 rock.gameObject.tag = "Obstacle";
             }
         }
-        else if(stageLevel == 1)
-        {
-
-        }
-        else if (stageLevel == 3)
-        {
-            CreateObstacle(5f);
-        }
         else if(stageLevel == 4)
         {
-
-        }
-        else if (stageLevel == 0 || stageLevel == 5)
-        {
-            //NO Obstacle
+            //no obstacle
         }
         else if (stageLevel == 6)
         {
@@ -47,11 +70,11 @@ public class ObstacleSpawner : MonoBehaviour
         }
         else if (stageLevel == 7) 
         {
-            CreateObstacle(20f);
+            CreateObstacle(1f);
 
         } else if(stageLevel == 8)
         {
-            CreateObstacle(3f);
+            CreateObstacle(5f);
         }
 
     }
