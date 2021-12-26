@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,7 +22,7 @@ public class CollisionDetection : MonoBehaviour
                     Destroy(collision.gameObject);
                 }
                 SceneManager.LoadScene("GameoverScene", LoadSceneMode.Additive);
-                SceneManager.UnloadSceneAsync("Road");
+                SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1));
                 isLoaded = true;
             }
         }

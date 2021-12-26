@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -35,7 +35,8 @@ public class ClearController : MonoBehaviour
         KeepItManager.Instance.Save(KeepItManager.Instance.Level);
         KeepItManager.Instance.Load();
         SceneManager.LoadScene("ClearScene", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("Road");
+        //SceneManager.UnloadSceneAsync("Road");
+        SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1));
 
     }
 }

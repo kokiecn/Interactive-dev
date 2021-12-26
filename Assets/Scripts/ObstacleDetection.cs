@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +7,11 @@ public class ObstacleDetection : MonoBehaviour
     [SerializeField]private Camera cam;
     [SerializeField] private GameObject testObj;
     private Rigidbody rb;
+    public int power = 70;
     private void Start()
     {
         rb = testObj.GetComponent<Rigidbody>();
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -18,7 +20,7 @@ public class ObstacleDetection : MonoBehaviour
         {
             Vibration.Vibrate(200);
             cam.GetComponent<CameraShake>().Shake(0.2f, 0.01f);
-            rb.AddForce(new Vector3(0,1.0f,0) *70);
+            rb.AddForce(new Vector3(0,1.0f,0) *power);
         }
 
     }
