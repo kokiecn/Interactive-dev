@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +21,8 @@ public class LevelManager : MonoBehaviour
             }
 
         });
+
+        string prefix = "RoadLevel";
         
         for(int i = 0; i < button_list.Length; i++)
         {
@@ -30,7 +32,8 @@ public class LevelManager : MonoBehaviour
                 if (!pressed)
                 {
                     KeepItManager.Instance.Level = tmp;
-                    SceneManager.LoadScene("Road", LoadSceneMode.Additive);
+                    prefix = prefix + (tmp+1).ToString();
+                    SceneManager.LoadScene(prefix, LoadSceneMode.Additive);
                     SceneManager.UnloadSceneAsync("LevelChoiceScene");
                 }
             });

@@ -2407,6 +2407,10 @@ PrefabInstance:
       propertyPath: testObj
       value: 
       objectReference: {fileID: 7165064441115985657}
+    - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+      propertyPath: testObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 7165064441115985657}
     - target: {fileID: 3379029918802558161, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
       propertyPath: m_IsActive
       value: 1
