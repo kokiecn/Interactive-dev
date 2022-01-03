@@ -29,7 +29,7 @@ public class ObstacleSpawner : MonoBehaviour
                     GameObject windmil = Instantiate(windmilPrefab, Vector3.zero, Quaternion.identity);
                     windmil.transform.SetParent(this.transform);
                     windmil.transform.localPosition = tree1.transform.localPosition;
-                    windmil.GetComponent<Wind2>().velocity = new Vector3(0, 0, -10);
+                    windmil.GetComponent<Wind2>().velocity = new Vector3(0, 0, -3);
                 }
                 else
                 {
@@ -37,7 +37,7 @@ public class ObstacleSpawner : MonoBehaviour
                     GameObject windmil = Instantiate(windmilPrefab, Vector3.zero, Quaternion.Euler(0, 180, 0));
                     windmil.transform.SetParent(this.transform);
                     windmil.transform.localPosition = tree2.transform.localPosition;
-                    windmil.GetComponent<Wind2>().velocity = new Vector3(0, 0, 10);
+                    windmil.GetComponent<Wind2>().velocity = new Vector3(0, 0, 3);
                 }
             }
         }
@@ -47,7 +47,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
         else if(stageLevel == 5)
         {
-            CreateObstacle(15f);
+            CreateObstacle(10f);
         }
         else if (stageLevel == 0 )
         {
