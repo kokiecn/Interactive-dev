@@ -750,7 +750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myskybox: {fileID: 2100000, guid: e222162ddb8d34547a133b673221b195, type: 2}
   time: {fileID: 1477387478}
-  gameTime: 10
+  gameTime: 30
 --- !u!4 &1076302387
 Transform:
   m_ObjectHideFlags: 0

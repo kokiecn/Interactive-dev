@@ -1245,7 +1245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myskybox: {fileID: 2100000, guid: e222162ddb8d34547a133b673221b195, type: 2}
   time: {fileID: 1477387478}
-  gameTime: 10
+  gameTime: 30
 --- !u!4 &1076302387
 Transform:
   m_ObjectHideFlags: 0
@@ -2404,6 +2404,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+      propertyPath: power
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
       propertyPath: testObj
       value: 
       objectReference: {fileID: 7165064441115985657}
@@ -2426,6 +2430,18 @@ PrefabInstance:
     - target: {fileID: 5336128255648923724, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336128255648923724, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336128255648923724, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336128255648923724, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5336128255648923724, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
       propertyPath: m_LocalPosition.x
