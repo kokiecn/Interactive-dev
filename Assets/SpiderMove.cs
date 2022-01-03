@@ -14,8 +14,8 @@ public class SpiderMove : MonoBehaviour
     {
         handTransform = hand.transform;
         spiderRb = this.GetComponent<Rigidbody>();
-        float x = Random.Range(50f, 100f);
-        float z = Random.Range(50f, 100f);
+        int x = Random.Range(50, 100);
+        int z = Random.Range(50, 100);
         x = x % 2 == 1 ? x : -x;
         z = z % 2 == 1 ? z : -z;
         dir = new Vector3(x, 0, z);
@@ -27,7 +27,7 @@ public class SpiderMove : MonoBehaviour
         {
             
             Vector3 vec = new Vector3(handTransform.up.x, 0, handTransform.up.z);
-            if(vec.magnitude > 0.15)
+            if(vec.magnitude > 0.1)
             {
                 spiderRb.AddForce(vec * 150);
                 tilted = true;
@@ -36,8 +36,8 @@ public class SpiderMove : MonoBehaviour
             {
                 if (tilted)
                 {
-                    float x = Random.Range(50f, 100f);
-                    float z = Random.Range(50f, 100f);
+                   int x = Random.Range(50, 100);
+                    int z = Random.Range(50, 100);
                     x = x % 2 == 1 ? x : -x;
                     z = z % 2 == 1 ? z : -z;
                     dir = new Vector3(x, 0, z);
