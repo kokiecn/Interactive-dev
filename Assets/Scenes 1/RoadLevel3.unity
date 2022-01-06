@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 311250969}
   - component: {fileID: 311250968}
   - component: {fileID: 311250967}
+  - component: {fileID: 311250971}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -488,7 +489,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 160974b169763614f8cc3d0f282b059c, type: 2}
+  - {fileID: 2100000, guid: 11729fa27a679db4fbeedeff9e7512fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -532,6 +533,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311250971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311250966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6548832778b8d4133a469716f753285b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetMaterial: {fileID: 2100000, guid: 11729fa27a679db4fbeedeff9e7512fe, type: 2}
+  _scrollX: 1
+  _scrollY: 0
+--- !u!1 &371787557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8348156425464372151, guid: 8567cba490de9724ba76fe02efbfe01b, type: 3}
+  m_PrefabInstance: {fileID: 8348156423913556141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!45 &371787559
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371787557}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 85cf0b004bc4a654b9e501efcce47902, type: 2}
 --- !u!43 &460836684
 Mesh:
   m_ObjectHideFlags: 0
