@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6c4b6fac8887d4bb42c57e99962499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollBlockObject: {fileID: 8742352078976274020, guid: 5f49215339248b7459aa4a14184d1b4e, type: 3}
+  scrollBlockObject: {fileID: 8742352078976274020, guid: c40539306036e47cb903a337f701becc, type: 3}
   blockPopPoint: {fileID: 268723463}
   blockMoveForward: {x: 0.2, y: 0, z: 0}
   before_block_create_count: 8
@@ -448,6 +448,7 @@ GameObject:
   - component: {fileID: 311250969}
   - component: {fileID: 311250968}
   - component: {fileID: 311250967}
+  - component: {fileID: 311250971}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -488,7 +489,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 160974b169763614f8cc3d0f282b059c, type: 2}
+  - {fileID: 2100000, guid: 42e26e838cb21e944aa7de2aae4edefc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -532,6 +533,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &311250971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311250966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6548832778b8d4133a469716f753285b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetMaterial: {fileID: 2100000, guid: 42e26e838cb21e944aa7de2aae4edefc, type: 2}
+  _scrollX: 0.5
+  _scrollY: 0
 --- !u!43 &460836684
 Mesh:
   m_ObjectHideFlags: 0
@@ -860,6 +876,20 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &834147107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7156534908648472010, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
+  m_PrefabInstance: {fileID: 3868094455257074022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!45 &834147112
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834147107}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 5d133deeaa66ed445853e946ff25e073, type: 2}
 --- !u!43 &979183456
 Mesh:
   m_ObjectHideFlags: 0
