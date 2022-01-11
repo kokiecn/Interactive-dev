@@ -81,6 +81,12 @@ public class ObstacleSpawner : MonoBehaviour
     
     private void CreateObstacle(float windPower)
     {
+        if(stageLevel == 8)
+        {
+            tree1.SetActive(false);
+            tree2.SetActive(false);
+        }
+
         int randn = Random.Range(1, 20);
         if (randn < 3)
         {
