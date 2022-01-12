@@ -13,7 +13,6 @@ public class ObstacleSpawner : MonoBehaviour
     void Start()
     {
         stageLevel =  KeepItManager.Instance.Level;
-        Debug.Log(stageLevel);
         if (stageLevel == 2)
         {
             int randn = Random.Range(1, 20);
