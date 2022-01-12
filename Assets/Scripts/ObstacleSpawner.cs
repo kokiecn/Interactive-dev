@@ -43,7 +43,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
         else if (stageLevel == 3)
         {
-            CreateObstacle(5f);
+            
         }
         else if(stageLevel == 5)
         {
@@ -62,11 +62,11 @@ public class ObstacleSpawner : MonoBehaviour
         }
         else if(stageLevel == 4)
         {
-            //no obstacle
+            CreateObstacle(2f);
         }
         else if (stageLevel == 6)
         {
-            CreateObstacle(2f);
+            CreateObstacle(5f);
         }
         else if (stageLevel == 7) 
         {
