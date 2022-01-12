@@ -43,7 +43,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
         else if (stageLevel == 3)
         {
-            CreateObstacle(5f);
+            
         }
         else if(stageLevel == 5)
         {
@@ -62,11 +62,11 @@ public class ObstacleSpawner : MonoBehaviour
         }
         else if(stageLevel == 4)
         {
-            //no obstacle
+            CreateObstacle(2f);
         }
         else if (stageLevel == 6)
         {
-            CreateObstacle(2f);
+            CreateObstacle(5f);
         }
         else if (stageLevel == 7) 
         {
@@ -81,6 +81,12 @@ public class ObstacleSpawner : MonoBehaviour
     
     private void CreateObstacle(float windPower)
     {
+        if(stageLevel == 8)
+        {
+            tree1.SetActive(false);
+            tree2.SetActive(false);
+        }
+
         int randn = Random.Range(1, 20);
         if (randn < 3)
         {
