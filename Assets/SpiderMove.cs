@@ -23,11 +23,10 @@ public class SpiderMove : MonoBehaviour
 
     private void Update()
     {
-        if(count++ == 30)
+        if(count++ == 25)
         {
-            
             Vector3 vec = new Vector3(handTransform.up.x, 0, handTransform.up.z);
-            if(vec.magnitude > 0.1)
+            if(vec.magnitude > 0.2)
             {
                 spiderRb.AddForce(vec * 150);
                 tilted = true;

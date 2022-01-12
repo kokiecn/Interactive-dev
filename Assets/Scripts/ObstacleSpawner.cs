@@ -16,10 +16,6 @@ public class ObstacleSpawner : MonoBehaviour
         Debug.Log(stageLevel);
         if (stageLevel == 2)
         {
-            CreateObstacle(5f);
-        }
-        else if(stageLevel == 1)
-        {
             int randn = Random.Range(1, 20);
             if (randn < 5)
             {
@@ -41,6 +37,10 @@ public class ObstacleSpawner : MonoBehaviour
                 }
             }
         }
+        else if(stageLevel == 1)
+        {
+            CreateObstacle(5f);
+        }
         else if (stageLevel == 3)
         {
             
@@ -49,7 +49,7 @@ public class ObstacleSpawner : MonoBehaviour
         {
             CreateObstacle(10f);
         }
-        else if (stageLevel == 0 )
+        else if (stageLevel == 0)
         {
             int randn = Random.Range(1, 20);
             if (randn < 3)
@@ -66,7 +66,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
         else if (stageLevel == 6)
         {
-            CreateObstacle(5f);
+            CreateObstacle(7f);
         }
         else if (stageLevel == 7) 
         {
@@ -87,7 +87,7 @@ public class ObstacleSpawner : MonoBehaviour
             tree2.SetActive(false);
         }
 
-        int randn = Random.Range(1, 20);
+        int randn = Random.Range(1, 26);
         if (randn < 3)
         {
             GameObject rock = Instantiate(rockPrefab, Vector3.zero, Quaternion.Euler(-90, 0, 0));
@@ -95,9 +95,9 @@ public class ObstacleSpawner : MonoBehaviour
             rock.transform.localPosition = rockPrefab.transform.localPosition;
             rock.gameObject.tag = "Obstacle";
         }
-        else if (randn < 5)
+        else if (randn < 7)
         {
-            if (randn == 3)
+            if (randn<5)
             {
                 tree1.SetActive(false);
                 GameObject windmil = Instantiate(windmilPrefab, Vector3.zero, Quaternion.identity);

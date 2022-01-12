@@ -2079,7 +2079,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
       propertyPath: power
-      value: 10
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2049085693481651842, guid: c98ed68874689bb4d888fa9740f734fe, type: 3}
       propertyPath: testObj
