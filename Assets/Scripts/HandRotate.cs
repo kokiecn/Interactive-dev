@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ public class HandRotate : MonoBehaviour
         Vector3 ret = Input.compass.rawVector;
         if (Application.platform == RuntimePlatform.Android)
         {
-            // Android‚Å‚ÍArawVector‚Ì²‚ğ•ÏŠ·
+            // Android?????ArawVector??????????
             switch (Screen.orientation)
             {
                 case ScreenOrientation.LandscapeLeft:
@@ -35,10 +35,10 @@ public class HandRotate : MonoBehaviour
 
     void Start()
     {
-        // “ü—Í‚ÉƒWƒƒƒCƒ‚ğON‚É‚·‚é
+        // ???????W???C????ON??????
         Input.gyro.enabled = true;
-        // “ü—Í‚ÉƒRƒ“ƒpƒX‚ğON‚É‚·‚é
-        Input.compass.enabled = true;
+        // ???????R???p?X??ON??????
+        Input.compass.enabled = false;
     }
 
     void Update()

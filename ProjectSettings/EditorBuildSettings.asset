@@ -4,5 +4,53 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes 1/StartScene.unity
+    guid: 6af662a58140afe4199ba8a37a6a8c34
+  - enabled: 1
+    path: Assets/Scenes 1/ManagerScene.unity
+    guid: b5e99fe924a399d4aa1767d7649936e2
+  - enabled: 1
+    path: Assets/Scenes 1/Road.unity
+    guid: 06ee0eedbc1ddbc408b138647f9ef5d7
+  - enabled: 1
+    path: Assets/Scenes 1/GameoverScene.unity
+    guid: 210a349a91a0e1b418d1072dee5557e5
+  - enabled: 1
+    path: Assets/Scenes 1/LevelChoiceScene.unity
+    guid: 7cec0558cb60a6b48b9a951215c7648b
+  - enabled: 1
+    path: Assets/Scenes 1/ClearScene.unity
+    guid: d4a9f1c02f439f447962ae8b0b89e56b
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel1.unity
+    guid: 0e3e7489417da47699a479bad061685c
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel3.unity
+    guid: 03dc4bdcca7f940be9d8c7b21f9463e9
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel7.unity
+    guid: 44bab9aa86efc4dc1a219336196c7912
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel2.unity
+    guid: b2edee37262ae49a4a1200fab85fb916
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel4.unity
+    guid: 4d70c7cfdd943a247ae1e5bdfc95f833
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel6.unity
+    guid: 77baa08564aa03740ac3786a83783fea
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel5.unity
+    guid: 0799278f882ee5b49a554761fdadb0d8
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel8.unity
+    guid: e4879b4fa8e97af42b97f481fbfe5db5
+  - enabled: 1
+    path: Assets/Scenes 1/RoadLevel9.unity
+    guid: 612815b4d1064d04da3f0fcd45eebd97
+  - enabled: 1
+    path: Assets/Scenes 1/Tutorial.unity
+    guid: 67df9fe0ed63c48e7b697d9c0ce86a9f
   m_configObjects: {}
