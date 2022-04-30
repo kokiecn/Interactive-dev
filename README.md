@@ -8,3 +8,5 @@ All you have to do is that you tilt your smartphone not to drop objects out of t
 Keep it!!!
 
 https://play.google.com/store/apps/details?id=com.TeamInteractiveHKK.KeepIt&hl=ja&gl=US
+
+実世界のスマートフォンの傾きがゲーム内のおぼんと同期されます。
